@@ -42,10 +42,7 @@ struct ContentView: View {
                 .border(.red, width: 1)
             Slider(
                 value: $containerWidth,
-                in: 100...300,
-                onEditingChanged: { changed in
-                    print("ContainerWidth: \($containerWidth.wrappedValue)")
-                }
+                in: 100...300
             ).padding()
         }
     }
