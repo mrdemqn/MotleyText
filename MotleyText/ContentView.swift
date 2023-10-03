@@ -39,8 +39,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text(attributedString)
-                .padding(.vertical, 50)
-                .frame(width: containerWidth)
+                .frame(width: containerWidth, height: 300)
                 .border(.red, width: 1)
             Slider(
                 value: $containerWidth,
