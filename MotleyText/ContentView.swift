@@ -11,6 +11,8 @@ struct ContentView: View {
     
     @State private var containerWidth: CGFloat = 300
     
+    private let range: ClosedRange<CGFloat> = 100...300
+    
     private var attributedString: AttributedString {
         var string = AttributedString()
         let newTaskContainer = AttributeContainer()
@@ -42,7 +44,7 @@ struct ContentView: View {
                 .border(.red, width: 1)
             Slider(
                 value: $containerWidth,
-                in: 100...300
+                in: range
             ).padding()
         }
     }
